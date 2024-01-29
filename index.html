@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Tracker Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="image">
+      <img
+        src="background.jpg"
+        alt="Background Image"
+        class="background-image"
+      />
+      <div class="container" id="scrollContainer">
+        <h1>Task Tracker</h1>
+        <form id="taskForm">
+          <label for="taskName">Task Name:</label>
+          <input type="text" id="taskName" name="taskName" required />
+          <label for="taskDescription">Description:</label>
+          <textarea id="taskDescription" name="taskDescription"></textarea>
+          <label for="dueDate">Due Date:</label>
+          <input type="date" id="dueDate" name="dueDate" required />
+
+          <label for="priority">Priority:</label>
+          <select id="priority" name="priority" required>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+
+          <button type="button" id="addAction">Add Task</button>
+          <button type="button" id="editAction" style="display: none">
+            Edit Task
+          </button>
+          <button type="button" id="cancelAction" style="display: none">
+            Cancel
+          </button>
+        </form>
+
+        <ul id="taskList"></ul>
+        <button id="deleteSelectedButton">Delete Completed Tasks</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
